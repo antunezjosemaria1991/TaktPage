@@ -1,115 +1,129 @@
-.filas
-{
+.filas {
   height: 200px;
 }
-.filas .col{
-    height: inherit;
- }
- .line{
+
+.filas .col {
+  height: inherit;
+}
+
+.line {
   height: inherit;
   width: 10%;
   background-color: black;
   margin-left: 45%;
- }
- .horizontal-line-container{
+}
+
+.horizontal-line-container {
   padding: 0;
-  background: linear-gradient(180deg,white 40%, black 48%,black 56%, white 52%);
- }
- .horizontal-line{
-  height: 6px;
-    /* width: inherit; */
-    /* margin-top: 45%; */
-    background-color: black;
-    margin-top: 6px;
- }
- .outermost-container{
-   background-color: black;
-   height: 35px;
- }
- .border-line{
-  height: 6px;
-    width: 53%;
-    /* margin-top: 45%; */
-    background-color: black;
-    margin-top: 6px;
-
- }
- .vertical-line-container{
-  background: linear-gradient(90deg,white 46%, black 44%,black 51%, white 52%); 
+  background: linear-gradient(180deg, white 40%, black 48%, black 56%, white 52%);
 }
 
-.circulo
-{
-    margin-left: 15%;
-    margin-top: 55%;
-    border-radius: 287px;
-    border: 5px solid black;
-    padding: 0px;
-    width: 60px;
-	height: 60px;
-	background-color: gray;
+.horizontal-line {
+  height: 6px;
+  background-color: black;
+  margin-top: 6px;
 }
-.cuadrado{
-    margin-left: 15%;
-    margin-top: 55%;
-    border-radius: 18px;
-    border: 5px solid black;
-    padding: 0px;
-    width: 60px;
-    height: 60px;
-    background-color: gray;
+
+.outermost-container {
+  background-color: black;
+  height: 35px;
+}
+
+.border-line {
+  height: 6px;
+  width: 53%;
+  background-color: black;
+  margin-top: 6px;
+}
+
+.vertical-line-container {
+  background: linear-gradient(90deg, white 46%, black 44%, black 51%, white 52%);
+}
+
+/* Estilos para circulos de los Agv. */
+
+.circulo {
+  margin-left: 15%;
+  margin-top: 55%;
+  border-radius: 287px;
+  border: 5px solid black;
+  padding: 0px;
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+}
+
+/* Estilos para cuadrados de las Estaciones. */
+
+.cuadrado {
+  margin-left: 15%;
+  margin-top: 55%;
+  border-radius: 18px;
+  border: 5px solid black;
+  padding: 0px;
+  width: 60px;
+  height: 60px;
+  background-color: gray;
 }
 
 /* %%%%%%%%%%%%%  SONAR  %%%%%%%%%%%% */
+
 html, body, .sonar-wrapper {
-	height: 100%;
-  }
+  height: 100%;
+}
+
 /* Prevent scrollbars to appear when waves go out of bound */
+
 .sonar-wrapper {
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-	padding: 22% 0;
-  }
-  
-  /* The circle */
-  .sonar-emitter {
-	position: relative;
-	margin: 0 auto;
-	width: 30px;
-	height: 30px;
-	border-radius: 9999px;
-	background-color: HSL(45,100%,50%);
-  }
-  
-  /* the 'wave', same shape and size as its parent */
-  .sonar-wave {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 9999px;
-	background-color: HSL(45,100%,50%);
-	opacity: 0;
-	z-index: -1;
-	pointer-events: none;
-  }
-  
-  /*
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 22% 0;
+}
+
+/* The circle */
+
+.sonar-emitter {
+  position: relative;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  background-color: HSL(45, 100%, 50%);
+}
+
+/* the 'wave', same shape and size as its parent */
+
+.sonar-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: HSL(45, 100%, 50%);
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*
 	Animate!
 	NOTE: add browser prefixes where needed.
   */
-  .sonar-wave {
-	animation: sonarWave 2s linear infinite;
+
+.sonar-wave {
+  animation: sonarWave 2s linear infinite;
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
   }
-  
-  @keyframes sonarWave {
-	from {
-	  opacity: 0.4;
-	}
-	to {
-	  transform: scale(3);
-	  opacity: 0;
-	}
+  to {
+    transform: scale(3);
+    opacity: 0;
   }
+}
+
+/* %%%%%%%%%%%%%  SONAR  %%%%%%%%%%%% */
